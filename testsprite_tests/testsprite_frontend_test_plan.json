@@ -1,0 +1,571 @@
+[
+  {
+    "id": "TC001",
+    "title": "Landing Page Render and Hero Animation",
+    "description": "Verify that the landing page loads correctly with the hero section displaying animated introduction and 3D Earth background functioning smoothly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage URL"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the hero section is present"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the 3D Earth animation is rendered and responsive"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the animated introduction text appears and cycles through dynamic content smoothly"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "About Section Content Display",
+    "description": "Validate that the About section displays biography, education, achievements, and community involvement details correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Scroll to the About section on the homepage"
+      },
+      {
+        "type": "assertion",
+        "description": "Check the biography text is displayed accurately"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify education details are shown with correct formatting"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm achievements and community involvement info is present"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Skills Section Interactive Display",
+    "description": "Ensure that skills are displayed interactively with categories and proficiency levels and that client-side animations function correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Skills section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify skills are grouped into correct categories"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that each skill shows the associated proficiency level"
+      },
+      {
+        "type": "action",
+        "description": "Interact with skill elements (e.g., hover or click)"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm client-side animations trigger smoothly"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Projects Section Display and Interaction",
+    "description": "Validate that portfolio projects are displayed with images, tech stack tags, and working demo and repository links, including interactive project cards.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Projects section"
+      },
+      {
+        "type": "assertion",
+        "description": "Check each project card shows an image and tech stack tags"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify demo link opens correct project demo in new tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm repository link points to the correct source repository"
+      },
+      {
+        "type": "action",
+        "description": "Hover or click on a project card"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure interactive effects or animations trigger properly"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Experience Timeline Rendering and Details",
+    "description": "Ensure the experience timeline displays job roles, companies, and durations correctly and renders client-side data properly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Experience section"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm timeline shows all experience entries in chronological order"
+      },
+      {
+        "type": "assertion",
+        "description": "Check job roles, company names, and employment durations are displayed accurately"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through timeline"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify smooth client-side rendering and animations"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Blog Section Markdown Rendering and Excerpts",
+    "description": "Validate that blog posts are rendered correctly with markdown content, excerpts, and cover images.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Blog section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list displays blog post titles with excerpts"
+      },
+      {
+        "type": "assertion",
+        "description": "Check each blog post displays appropriate cover image"
+      },
+      {
+        "type": "action",
+        "description": "Open individual blog post"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm markdown content renders with correct formatting (e.g., headings, lists, links)"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Contact Form Validation Success and Error Handling",
+    "description": "Verify contact form input validation enforces required fields and correct formats, and backend API accepts valid submissions and rejects invalid data with errors.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Contact section"
+      },
+      {
+        "type": "action",
+        "description": "Submit contact form with all valid inputs"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm submission success message is shown"
+      },
+      {
+        "type": "action",
+        "description": "Submit contact form with missing required fields"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation error messages appear appropriately"
+      },
+      {
+        "type": "action",
+        "description": "Submit contact form with invalid email format"
+      },
+      {
+        "type": "assertion",
+        "description": "Check for specific validation error about email format"
+      },
+      {
+        "type": "action",
+        "description": "Submit contact form triggering backend API error (simulate if possible)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user-friendly error message is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Admin Authentication Login and Session Management",
+    "description": "Test admin login with valid and invalid credentials, ensure session is maintained securely and logout invalidates session.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to admin login page"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid admin username and password"
+      },
+      {
+        "type": "action",
+        "description": "Click login"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify login is successful and admin dashboard is accessible"
+      },
+      {
+        "type": "action",
+        "description": "Reload admin dashboard page"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm session persists and user remains logged in"
+      },
+      {
+        "type": "action",
+        "description": "Click logout button"
+      },
+      {
+        "type": "assertion",
+        "description": "Check user is logged out and redirected to login page"
+      },
+      {
+        "type": "action",
+        "description": "Attempt login with invalid credentials"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify login failure message is shown and access denied"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Admin Dashboard CRUD Operations for Portfolio Content",
+    "description": "Validate that admin can create, read, update, and delete portfolio projects, skills, experience entries, and blog posts with UI reflecting changes accordingly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in as admin and navigate to dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Create a new project with valid details"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the new project appears in the projects list"
+      },
+      {
+        "type": "action",
+        "description": "Edit an existing skill entry and save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated skill details are reflected correctly"
+      },
+      {
+        "type": "action",
+        "description": "Delete an experience entry"
+      },
+      {
+        "type": "assertion",
+        "description": "Check the deleted entry is removed from the experience list"
+      },
+      {
+        "type": "action",
+        "description": "Create a new blog post with markdown content"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm blog post appears in the blog list with correct excerpt and metadata"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Admin Dashboard Message Management",
+    "description": "Ensure admin dashboard allows viewing and managing incoming contact messages.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in as admin and open message management panel"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify incoming messages are listed with sender name, email, and message preview"
+      },
+      {
+        "type": "action",
+        "description": "Open a message detail"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm full message content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Mark message as read or delete message"
+      },
+      {
+        "type": "assertion",
+        "description": "Check message status updates accordingly or is removed from list"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "3D Earth Component Light/Dark Mode Integration",
+    "description": "Verify the interactive 3D Earth component switches correctly between light and dark themes and remains responsive.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to homepage containing 3D Earth component"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm 3D Earth renders properly in default theme"
+      },
+      {
+        "type": "action",
+        "description": "Toggle dark/light theme via theme switcher"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure 3D Earth appearance changes correspondingly and smoothly"
+      },
+      {
+        "type": "assertion",
+        "description": "Check component remains interactive and responsive after theme change"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "SEO Metadata and Sitemap Availability",
+    "description": "Validate that SEO metadata is present on all public pages, and sitemap.xml and robots.txt generate correctly and are accessible.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to homepage and inspect page source"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify SEO metadata tags (title, description, canonical) exist and are correct"
+      },
+      {
+        "type": "action",
+        "description": "Request /sitemap.xml"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm sitemap document is returned with correct URLs listed"
+      },
+      {
+        "type": "action",
+        "description": "Request /robots.txt"
+      },
+      {
+        "type": "assertion",
+        "description": "Check robots.txt file is returned and contains appropriate rules"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Dark and Light Theme Switching Across Pages",
+    "description": "Check that dark and light theme toggling works correctly across all pages and components with smooth animations.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Visit multiple pages including homepage, about, projects, blog"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify default theme is applied consistently"
+      },
+      {
+        "type": "action",
+        "description": "Toggle theme switcher to change theme"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm theme change affects all components and pages correctly"
+      },
+      {
+        "type": "assertion",
+        "description": "Check animations and transitions for theme switch are smooth and without glitches"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Multi-language Content Rendering",
+    "description": "Verify multi-language support works by switching locales and confirming localized content renders correctly in all sections.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Set user locale to English"
+      },
+      {
+        "type": "assertion",
+        "description": "Check all sections display content in English"
+      },
+      {
+        "type": "action",
+        "description": "Change user locale to alternate language (e.g., another supported locale)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all page content updates to the selected language"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm no untranslated text or placeholders are present"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Navigation Bar Responsiveness and Smooth Scroll",
+    "description": "Test that the responsive navigation bar adapts to different screen sizes and smooth scroll navigation works to page sections.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the website on desktop screen size"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify navbar displays all links and theme toggle correctly"
+      },
+      {
+        "type": "action",
+        "description": "Click on each navigation link"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm page scrolls smoothly to corresponding section"
+      },
+      {
+        "type": "action",
+        "description": "Resize browser to mobile viewport"
+      },
+      {
+        "type": "assertion",
+        "description": "Check navbar collapses into hamburger menu"
+      },
+      {
+        "type": "action",
+        "description": "Open hamburger menu and click navigation links"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify smooth scrolling still functions correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "API Endpoint Success and Error Responses",
+    "description": "Validate REST API endpoints for skills, experience, projects, blog posts, and contact accept valid requests and respond with appropriate success and error statuses.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Make valid GET, POST, PUT, DELETE requests to each CRUD API endpoint"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm APIs respond with 200 or appropriate success status codes"
+      },
+      {
+        "type": "action",
+        "description": "Make invalid requests with missing or malformed data"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify APIs respond with proper error codes (e.g., 400, 401, 403, 404)"
+      },
+      {
+        "type": "action",
+        "description": "Attempt unauthorized calls where applicable"
+      },
+      {
+        "type": "assertion",
+        "description": "Check for appropriate denial responses"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Database Data Integrity and Relationship Enforcement",
+    "description": "Ensure the database schema enforces data integrity rules and relationships among projects, skills, experience, blog posts, and messages.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Insert valid records into each table via API or admin dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify data is stored correctly with foreign key constraints enforced"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to insert invalid data violating relationship constraints"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm database rejects insertion or updates with constraint violation errors"
+      },
+      {
+        "type": "action",
+        "description": "Delete a record with dependent records linked"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify cascading rules or error prevents orphan records"
+      }
+    ]
+  }
+]

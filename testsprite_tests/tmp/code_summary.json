@@ -1,0 +1,182 @@
+{
+    "tech_stack": [
+        "TypeScript",
+        "Next.js 16",
+        "React 19",
+        "Tailwind CSS 4",
+        "Prisma ORM",
+        "SQLite",
+        "NextAuth (Auth.js)",
+        "React Three Fiber (3D)",
+        "Framer Motion",
+        "React Markdown"
+    ],
+    "features": [
+        {
+            "name": "Hero Section",
+            "description": "Landing hero section with animated introduction and 3D Earth background",
+            "files": [
+                "components/sections/hero-section.tsx"
+            ]
+        },
+        {
+            "name": "About Section",
+            "description": "Personal about section with biography and profile information",
+            "files": [
+                "components/sections/about-section.tsx"
+            ]
+        },
+        {
+            "name": "Skills Section",
+            "description": "Interactive skills display with client-side animations",
+            "files": [
+                "components/sections/skills-section.tsx",
+                "components/sections/skills-client.tsx"
+            ]
+        },
+        {
+            "name": "Experience Section",
+            "description": "Work experience timeline with client-side rendering",
+            "files": [
+                "components/sections/experience-section.tsx",
+                "components/sections/experience-client.tsx"
+            ]
+        },
+        {
+            "name": "Projects Section",
+            "description": "Portfolio projects showcase with interactive cards",
+            "files": [
+                "components/sections/projects-section.tsx",
+                "components/sections/projects-client.tsx"
+            ]
+        },
+        {
+            "name": "Blog Section",
+            "description": "Blog posts display with markdown support",
+            "files": [
+                "components/sections/blog-section.tsx",
+                "components/sections/blog-client.tsx"
+            ]
+        },
+        {
+            "name": "Contact Section",
+            "description": "Contact form with form validation and submission handling",
+            "files": [
+                "components/sections/contact-section.tsx"
+            ]
+        },
+        {
+            "name": "3D Earth Component",
+            "description": "Interactive 3D Earth globe using React Three Fiber with light/dark mode support",
+            "files": [
+                "components/3d/earth-light.tsx"
+            ]
+        },
+        {
+            "name": "Sky Background",
+            "description": "Animated sky background with stars and day/night theming",
+            "files": [
+                "components/backgrounds/"
+            ]
+        },
+        {
+            "name": "Navigation",
+            "description": "Responsive navbar with theme toggle and smooth scroll navigation",
+            "files": [
+                "components/layout/navbar.tsx"
+            ]
+        },
+        {
+            "name": "UI Components",
+            "description": "Reusable UI components: Button, Card, Badge, Input, Textarea, Table, Calendar, DatePicker, Checkbox, Popover",
+            "files": [
+                "components/ui/button.tsx",
+                "components/ui/card.tsx",
+                "components/ui/badge.tsx",
+                "components/ui/input.tsx",
+                "components/ui/textarea.tsx",
+                "components/ui/table.tsx",
+                "components/ui/calendar.tsx",
+                "components/ui/date-picker.tsx",
+                "components/ui/checkbox.tsx",
+                "components/ui/popover.tsx",
+                "components/ui/label.tsx"
+            ]
+        },
+        {
+            "name": "Authentication System",
+            "description": "Admin authentication using NextAuth with Prisma adapter and bcrypt password hashing",
+            "files": [
+                "auth.ts",
+                "auth.config.ts",
+                "middleware.ts",
+                "actions/auth-actions.ts"
+            ]
+        },
+        {
+            "name": "Admin Dashboard",
+            "description": "Protected admin area for managing portfolio content",
+            "files": [
+                "app/admin/",
+                "components/admin/",
+                "actions/admin-settings.ts",
+                "actions/dashboard.ts"
+            ]
+        },
+        {
+            "name": "Contact API",
+            "description": "API endpoint for handling contact form submissions",
+            "files": [
+                "app/api/contact/"
+            ]
+        },
+        {
+            "name": "CRUD APIs",
+            "description": "REST APIs for managing skills, experience, projects, and blog posts",
+            "files": [
+                "app/api/skills/",
+                "app/api/experience/",
+                "app/api/projects/",
+                "app/api/posts/"
+            ]
+        },
+        {
+            "name": "Prisma Database",
+            "description": "Database layer with Prisma ORM using SQLite for data persistence",
+            "files": [
+                "lib/prisma.ts",
+                "prisma/"
+            ]
+        },
+        {
+            "name": "Internationalization",
+            "description": "Multi-language support with locale files",
+            "files": [
+                "locales/en.ts",
+                "locales/"
+            ]
+        },
+        {
+            "name": "SEO Configuration",
+            "description": "SEO optimization with robots.txt and sitemap generation",
+            "files": [
+                "app/robots.ts",
+                "app/sitemap.ts"
+            ]
+        },
+        {
+            "name": "Theme Provider",
+            "description": "Dark/Light theme support using next-themes",
+            "files": [
+                "components/providers/"
+            ]
+        },
+        {
+            "name": "Utility Functions",
+            "description": "Helper utilities including class name merging",
+            "files": [
+                "lib/utils.ts"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "project": "portofolio-antigravity",
+    "date": "2026-01-13",
+    "prepared_by": "Daffa Al Fatih"
+  },
+  "product_overview": "portofolio-antigravity is a modern, immersive portfolio website built with Next.js 16, designed to showcase professional skills, experience, projects, and blog content with an integrated admin dashboard for content management. It features advanced 3D graphics, smooth animations, and comprehensive SEO and security measures to provide an engaging and secure user experience.",
+  "core_goals": [
+    "Provide a professional online presence that demonstrates technical expertise and creativity",
+    "Showcase portfolio projects, professional experience, and skills in a visually engaging way",
+    "Enable potential clients, employers, and collaborators to easily explore and connect",
+    "Allow secure and efficient management of portfolio content via an admin dashboard",
+    "Offer a responsive, accessible, and optimized user experience with dark/light theme support"
+  ],
+  "key_features": [
+    "Landing page with animated hero section featuring 3D Earth background and dynamic text",
+    "About section with detailed biography, education, achievements, and community involvement",
+    "Skills section with interactive, categorized skill displays and proficiency levels",
+    "Projects section showcasing portfolio projects with images, tech stack tags, demo and repo links",
+    "Experience timeline with detailed job roles, companies, and durations",
+    "Blog section supporting markdown content rendering, excerpts, and cover images",
+    "Contact form with validation and backend API for message submission",
+    "Admin authentication with secure login and session management",
+    "Admin dashboard for CRUD content management: projects, skills, experience, blog posts, and messages",
+    "Interactive 3D Earth globe with light/dark mode",
+    "SEO configurations including sitemap and robots.txt",
+    "Multi-language support with locale files",
+    "Dark and light theme switching with smooth animations"
+  ],
+  "user_flow_summary": [
+    "Visitors land on the homepage and scroll through sections: hero, about, skills, projects, experience, blog, and contact",
+    "Users interact with project cards, blog articles, and send messages via the contact form",
+    "Admins log in securely via the authentication system",
+    "Admin users access dashboard to create, update, delete portfolio content and manage incoming messages",
+    "Admins log out securely after managing content"
+  ],
+  "validation_criteria": [
+    "All public sections render correctly with dynamic content and animations",
+    "Contact form input validation enforces required fields and formats",
+    "Authentication restricts access to admin dashboard and protected API routes",
+    "Admin CRUD operations correctly update the database and UI reflects changes",
+    "3D Earth and animations perform smoothly across supported devices and themes",
+    "SEO metadata and sitemap generate correctly and are accessible",
+    "Database schema enforces data integrity and relationships",
+    "API endpoints respond with appropriate success and error statuses",
+    "Dark/light theme toggles correctly across all pages and components",
+    "Multi-language support renders localized content based on user preference or locale"
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS 4",
+      "Prisma ORM",
+      "SQLite",
+      "NextAuth (Auth.js)",
+      "React Three Fiber (3D)",
+      "Framer Motion",
+      "React Markdown"
+    ],
+    "features": [
+      {
+        "name": "Hero Section",
+        "description": "Landing hero section with animated introduction and 3D Earth background",
+        "files": [
+          "components/sections/hero-section.tsx"
+        ]
+      },
+      {
+        "name": "About Section",
+        "description": "Personal about section with biography and profile information",
+        "files": [
+          "components/sections/about-section.tsx"
+        ]
+      },
+      {
+        "name": "Skills Section",
+        "description": "Interactive skills display with client-side animations",
+        "files": [
+          "components/sections/skills-section.tsx",
+          "components/sections/skills-client.tsx"
+        ]
+      },
+      {
+        "name": "Experience Section",
+        "description": "Work experience timeline with client-side rendering",
+        "files": [
+          "components/sections/experience-section.tsx",
+          "components/sections/experience-client.tsx"
+        ]
+      },
+      {
+        "name": "Projects Section",
+        "description": "Portfolio projects showcase with interactive cards",
+        "files": [
+          "components/sections/projects-section.tsx",
+          "components/sections/projects-client.tsx"
+        ]
+      },
+      {
+        "name": "Blog Section",
+        "description": "Blog posts display with markdown support",
+        "files": [
+          "components/sections/blog-section.tsx",
+          "components/sections/blog-client.tsx"
+        ]
+      },
+      {
+        "name": "Contact Section",
+        "description": "Contact form with form validation and submission handling",
+        "files": [
+          "components/sections/contact-section.tsx"
+        ]
+      },
+      {
+        "name": "3D Earth Component",
+        "description": "Interactive 3D Earth globe using React Three Fiber with light/dark mode support",
+        "files": [
+          "components/3d/earth-light.tsx"
+        ]
+      },
+      {
+        "name": "Sky Background",
+        "description": "Animated sky background with stars and day/night theming",
+        "files": [
+          "components/backgrounds/"
+        ]
+      },
+      {
+        "name": "Navigation",
+        "description": "Responsive navbar with theme toggle and smooth scroll navigation",
+        "files": [
+          "components/layout/navbar.tsx"
+        ]
+      },
+      {
+        "name": "UI Components",
+        "description": "Reusable UI components: Button, Card, Badge, Input, Textarea, Table, Calendar, DatePicker, Checkbox, Popover",
+        "files": [
+          "components/ui/button.tsx",
+          "components/ui/card.tsx",
+          "components/ui/badge.tsx",
+          "components/ui/input.tsx",
+          "components/ui/textarea.tsx",
+          "components/ui/table.tsx",
+          "components/ui/calendar.tsx",
+          "components/ui/date-picker.tsx",
+          "components/ui/checkbox.tsx",
+          "components/ui/popover.tsx",
+          "components/ui/label.tsx"
+        ]
+      },
+      {
+        "name": "Authentication System",
+        "description": "Admin authentication using NextAuth with Prisma adapter and bcrypt password hashing",
+        "files": [
+          "auth.ts",
+          "auth.config.ts",
+          "middleware.ts",
+          "actions/auth-actions.ts"
+        ]
+      },
+      {
+        "name": "Admin Dashboard",
+        "description": "Protected admin area for managing portfolio content",
+        "files": [
+          "app/admin/",
+          "components/admin/",
+          "actions/admin-settings.ts",
+          "actions/dashboard.ts"
+        ]
+      },
+      {
+        "name": "Contact API",
+        "description": "API endpoint for handling contact form submissions",
+        "files": [
+          "app/api/contact/"
+        ]
+      },
+      {
+        "name": "CRUD APIs",
+        "description": "REST APIs for managing skills, experience, projects, and blog posts",
+        "files": [
+          "app/api/skills/",
+          "app/api/experience/",
+          "app/api/projects/",
+          "app/api/posts/"
+        ]
+      },
+      {
+        "name": "Prisma Database",
+        "description": "Database layer with Prisma ORM using SQLite for data persistence",
+        "files": [
+          "lib/prisma.ts",
+          "prisma/"
+        ]
+      },
+      {
+        "name": "Internationalization",
+        "description": "Multi-language support with locale files",
+        "files": [
+          "locales/en.ts",
+          "locales/"
+        ]
+      },
+      {
+        "name": "SEO Configuration",
+        "description": "SEO optimization with robots.txt and sitemap generation",
+        "files": [
+          "app/robots.ts",
+          "app/sitemap.ts"
+        ]
+      },
+      {
+        "name": "Theme Provider",
+        "description": "Dark/Light theme support using next-themes",
+        "files": [
+          "components/providers/"
+        ]
+      },
+      {
+        "name": "Utility Functions",
+        "description": "Helper utilities including class name merging",
+        "files": [
+          "lib/utils.ts"
+        ]
+      }
+    ]
+  }
+}

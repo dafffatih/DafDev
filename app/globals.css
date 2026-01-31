@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+
+:root {
+  /* Space Theme (Dark - Default) */
+  --background: #050508;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
+  --primary: #6366f1;
+  --primary-foreground: #f8fafc;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #6366f1;
+  --radius: 0.5rem;
+}
+
+[data-theme="sky"] {
+  /* Sky Theme (Light) - Brighter & Better Contrast */
+  --background: #f0f9ff;
+  --foreground: #0c1524;
+  --card: #ffffff;
+  --card-foreground: #0c1524;
+  --popover: #ffffff;
+  --popover-foreground: #0c1524;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --secondary: #e0f2fe;
+  --secondary-foreground: #0c1524;
+  --muted: #e0f2fe;
+  --muted-foreground: #475569;
+  --accent: #bae6fd;
+  --accent-foreground: #0c1524;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #bae6fd;
+  --input: #e0f2fe;
+  --ring: #0284c7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Custom Gradient Loading Bar */
+#nprogress .bar {
+  background: linear-gradient(90deg,
+      #FF0080 0%,
+      #7928CA 50%,
+      #0070F3 100%) !important;
+  height: 4px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #0070F3, 0 0 5px #0070F3 !important;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Hide native scrollbar completely but keep scroll functionality */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="sky"] .text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Sky theme scrollbar */
+[data-theme="sky"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), #38bdf8);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+[data-theme="sky"] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #7dd3fc);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Slow spin animation for fallback earth */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Animated gradient for hero title */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    border-color: transparent
+  }
+
+  51%,
+  100% {
+    border-color: var(--primary)
+  }
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow travel animation - moves from top to bottom, smooth loop */
+@keyframes glow-travel-down {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(66.67%);
+  }
+}
+
+/* Glow pulse animation for background */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Floating icon hover effect */
+.floating-icon {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0px transparent);
+}
+
+.floating-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.8)) drop-shadow(0 0 16px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 24px rgba(236, 72, 153, 0.4));
+}
