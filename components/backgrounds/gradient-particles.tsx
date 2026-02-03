@@ -19,9 +19,6 @@ interface GradientLayer {
     size: number
     x: number
     y: number
-    size: number
-    x: number
-    y: number
 }
 
 export function GradientParticles() {
