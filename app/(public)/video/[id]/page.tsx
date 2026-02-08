@@ -26,7 +26,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
     }
 
     return (
-        <div className="min-h-screen bg-background pt-24 pb-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
             <div className="w-full max-w-6xl mx-auto space-y-8">
                 {/* Back Button */}
                 <div className="w-full">
